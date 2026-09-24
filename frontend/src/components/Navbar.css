@@ -623,3 +623,15 @@
     transition: none;
   }
 }
+/* Paste this block at the very end of src/components/Navbar.css. */
+
+/* Remove the large rectangular focus outline around the complete logo. */
+.royal-brand:focus-visible {
+  outline: none;
+}
+
+/* Keep an accessible, premium focus indicator on the logo mark only. */
+.royal-brand:focus-visible .royal-brand-mark {
+  outline: 3px solid rgba(43, 150, 255, 0.42);
+  outline-offset: 4px;
+}
