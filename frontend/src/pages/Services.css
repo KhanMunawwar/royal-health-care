@@ -1,0 +1,1839 @@
+/* Royal Health Care — Services */
+
+.rhc-services {
+  --service-ink: #08234c;
+  --service-copy: #536a88;
+  --service-blue: #0058e6;
+  --service-teal: #0086a0;
+  --service-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --service-gutter: clamp(20px, 4vw, 64px);
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 0 0 38px;
+  color: var(--service-ink);
+  background:
+    radial-gradient(ellipse at 100% 60%, #f2fbff, transparent 45%),
+    #fff;
+  font-family: inherit;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.rhc-services,
+.rhc-services *,
+.rhc-services *::before,
+.rhc-services *::after {
+  box-sizing: border-box;
+}
+
+.rhc-services :where(h1, h2, h3, p, ul, ol) {
+  margin: 0;
+}
+
+.rhc-services :where(h1, h2, h3) {
+  color: var(--service-ink);
+  font-family: inherit;
+  text-transform: none;
+}
+
+.rhc-services :where(svg) {
+  display: block;
+  flex-shrink: 0;
+}
+
+.rhc-services :where(img) {
+  display: block;
+  max-width: 100%;
+}
+
+.rhc-services :where(a) {
+  text-decoration: none;
+}
+
+.rhc-services :where(button) {
+  font: inherit;
+  cursor: pointer;
+}
+
+.rhc-services :where(a, button):focus-visible {
+  outline: 3px solid #075ee0;
+  outline-offset: 5px;
+}
+
+.rhc-services__container {
+  width: min(1280px, calc(100% - var(--service-gutter) * 2));
+  margin-inline: auto;
+}
+
+.rhc-services__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--service-blue);
+  font-size: 0.625rem;
+  font-weight: 800;
+  line-height: 1.8;
+  letter-spacing: 0.16em;
+}
+
+.rhc-services__eyebrow > span {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #0088a2;
+  box-shadow: 0 0 0 5px #e2f5fa;
+}
+
+.rhc-services__intro h2,
+.rhc-services__online h2,
+.rhc-services__why h2 {
+  font-size: clamp(1.9rem, 3.1vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.rhc-services__intro h2 span,
+.rhc-services__online h2 span,
+.rhc-services__why h2 span {
+  color: var(--service-blue);
+}
+
+.rhc-services__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.rhc-services__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 49px;
+  padding: 13px 24px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 750;
+  line-height: 1.5;
+  transition:
+    transform 250ms var(--service-ease),
+    box-shadow 250ms ease,
+    background 250ms ease;
+}
+
+.rhc-services__button--white {
+  color: #0642a5;
+  background: #fff;
+  border-color: #d8e8f7;
+  box-shadow: 0 5px 20px rgb(0 27 68 / 12%);
+}
+
+.rhc-services__button--outline {
+  min-width: 143px;
+  color: #fff;
+  background: rgb(4 31 63 / 14%);
+  border-color: #b5d5ed;
+}
+
+.rhc-services__button--blue {
+  color: #fff;
+  background: linear-gradient(110deg, #0867f0, #004ac7);
+  border-color: #0a62dc;
+  box-shadow: 0 8px 18px -10px rgb(0 76 192 / 50%);
+}
+
+/* Services banner */
+
+.rhc-services__hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 426px;
+  overflow: hidden;
+  border-radius: 0 0 18px 18px;
+  background: #06254c;
+}
+
+.rhc-services__hero-image {
+  position: absolute;
+  z-index: -3;
+  inset: 0 0 0 auto;
+  width: 68%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 63% 54%;
+}
+
+.rhc-services__hero::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #062347 0%,
+    #083366 35%,
+    rgb(8 48 91 / 88%) 45%,
+    rgb(8 48 91 / 22%) 62%,
+    transparent 82%
+  );
+  pointer-events: none;
+}
+
+.rhc-services__hero-inner {
+  position: relative;
+  padding-block: 25px 43px;
+}
+
+.rhc-services__breadcrumb ol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 0;
+  color: #d2e6f6;
+  list-style: none;
+  font-size: 0.6875rem;
+  line-height: 1.6;
+}
+
+.rhc-services__breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.rhc-services__breadcrumb a {
+  color: #d2e6f6;
+}
+
+.rhc-services__hero-copy {
+  max-width: 720px;
+  margin-top: 29px;
+}
+
+.rhc-services__hero .rhc-services__eyebrow {
+  color: #6be2fa;
+}
+
+.rhc-services__hero .rhc-services__eyebrow > span {
+  background: #6be2fa;
+  box-shadow: 0 0 0 5px rgb(41 160 192 / 18%);
+}
+
+.rhc-services .rhc-services__hero :where(h1, h2) {
+  margin-top: 13px;
+  color: #fff;
+  font-size: clamp(2.5rem, 4.45vw, 4rem);
+  font-weight: 800;
+  line-height: 1.035;
+  letter-spacing: -0.047em;
+}
+
+.rhc-services__hero :where(h1, h2) span {
+  color: #7ce5f2;
+}
+
+.rhc-services__lead {
+  max-width: 485px;
+  margin-top: 20px;
+  color: #e1ecf7;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.rhc-services__hero .rhc-services__actions {
+  margin-top: 23px;
+}
+
+.rhc-services__hero-badge {
+  position: absolute;
+  top: 61px;
+  right: 18%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 17px;
+  border: 1px solid #d3e7f5;
+  border-radius: 13px;
+  color: #12335e;
+  background: rgb(255 255 255 / 94%);
+  box-shadow: 0 10px 35px rgb(5 57 99 / 15%);
+  font-size: 0.75rem;
+  font-weight: 750;
+}
+
+.rhc-services__hero-badge > span {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 9px;
+  color: #0566e3;
+  background: #e7f8ff;
+}
+
+.rhc-services__hero-cross {
+  position: absolute;
+  color: #4bc9f5;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.rhc-services__hero-cross--one {
+  top: 96px;
+  left: 51%;
+}
+
+.rhc-services__hero-cross--two {
+  top: 139px;
+  left: 55%;
+  opacity: 0.52;
+}
+
+.rhc-services__hero :where(a, button):focus-visible {
+  outline-color: #86eeff;
+}
+
+/* Introduction */
+
+.rhc-services__intro {
+  display: grid;
+  grid-template-columns: 0.96fr 1.24fr;
+  align-items: center;
+  gap: 40px;
+  padding-block: 43px 39px;
+}
+
+.rhc-services__intro h2 {
+  margin-top: 13px;
+}
+
+.rhc-services__intro-copy > p:last-child {
+  margin-top: 16px;
+  color: var(--service-copy);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.rhc-services__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  padding: 23px 10px;
+  border: 1px solid #e9f7fc;
+  border-radius: 21px;
+  background: linear-gradient(115deg, #f0faff, #e8f7fe);
+  list-style: none;
+}
+
+.rhc-services__highlights li {
+  min-width: 0;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.rhc-services__highlights li + li {
+  border-left: 1px solid #cde9f5;
+}
+
+.rhc-services__highlights li > span {
+  display: grid;
+  place-items: center;
+  width: 63px;
+  height: 63px;
+  margin-inline: auto;
+  border: 1px solid #d1eafa;
+  border-radius: 50%;
+  color: #0062ed;
+  background: #fff;
+}
+
+.rhc-services__highlights h3 {
+  margin-top: 11px;
+  font-size: 0.9375rem;
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.rhc-services__highlights p {
+  max-width: 160px;
+  margin: 9px auto 0;
+  color: #4e6a88;
+  font-size: 0.8125rem;
+  line-height: 1.65;
+}
+
+.rhc-services__collection-heading {
+  padding-block: 2px 26px;
+  text-align: center;
+}
+
+.rhc-services__collection-heading .rhc-services__eyebrow {
+  justify-content: center;
+}
+
+.rhc-services__collection-heading h2 {
+  margin-top: 8px;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
+  scroll-margin-top: 130px;
+}
+
+.rhc-services__collection-heading h2:focus {
+  outline: none;
+}
+
+.rhc-services__section-note {
+  margin-top: 10px;
+  color: var(--service-copy);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* Service cards */
+
+.rhc-services__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.rhc-services__item {
+  min-width: 0;
+  grid-column: span 4;
+}
+
+.rhc-services__item--doctor-consultation {
+  grid-column: span 7;
+}
+
+.rhc-services__item--online-consultation {
+  grid-column: span 5;
+}
+
+.rhc-services__card {
+  position: relative;
+  isolation: isolate;
+  min-height: 290px;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #dfedf6;
+  border-radius: 17px;
+  background: #f1f8fc;
+  box-shadow: 0 7px 19px -15px rgb(17 65 113 / 27%);
+  transition:
+    transform 300ms var(--service-ease),
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+.rhc-services__card-image {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+  transition: transform 700ms var(--service-ease);
+}
+
+.rhc-services__card::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #f7fcff 0%,
+    rgb(247 252 255 / 99%) 22%,
+    rgb(247 252 255 / 88%) 42%,
+    rgb(247 252 255 / 36%) 64%,
+    transparent 88%
+  );
+}
+
+.rhc-services__card-content {
+  position: relative;
+  width: 65%;
+  min-height: inherit;
+  padding: 23px 0 18px 25px;
+}
+
+.rhc-services__card-icon {
+  display: grid;
+  place-items: center;
+  width: 53px;
+  height: 53px;
+  border: 1px solid #bfe5fc;
+  border-radius: 15px;
+  color: #0066e5;
+  background: linear-gradient(140deg, #e9f9ff, #ddf2ff);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 80%);
+}
+
+.rhc-services__card-copy {
+  padding-top: 13px;
+}
+
+.rhc-services__category {
+  color: #005dce;
+  font-size: 0.5625rem;
+  font-weight: 800;
+  line-height: 1.7;
+  letter-spacing: 0.16em;
+}
+
+.rhc-services__card h3 {
+  margin-top: 5px;
+  font-size: clamp(1.1rem, 1.45vw, 1.375rem);
+  font-weight: 780;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.rhc-services__description {
+  max-width: 197px;
+  margin-top: 10px;
+  color: #405f80;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.rhc-services__read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 13px;
+  min-height: 44px;
+  margin: 9px 0 0;
+  padding: 7px 1px;
+  border: 0;
+  border-radius: 4px;
+  color: #0056d9;
+  background: transparent;
+  font-size: 0.8125rem;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.rhc-services__read-more > svg {
+  transition: transform 250ms var(--service-ease);
+}
+
+.rhc-services__card--doctor-consultation,
+.rhc-services__card--online-consultation {
+  min-height: 285px;
+}
+
+.rhc-services__card--doctor-consultation .rhc-services__card-image {
+  width: 79%;
+  left: auto;
+  object-position: 68% center;
+}
+
+.rhc-services__card--doctor-consultation::after {
+  background: linear-gradient(
+    90deg,
+    #f3faff 0%,
+    #f3faff 27%,
+    rgb(243 250 255 / 93%) 37%,
+    rgb(243 250 255 / 25%) 56%,
+    transparent 75%
+  );
+}
+
+.rhc-services__card--doctor-consultation .rhc-services__card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 19px;
+  width: 57%;
+  padding: 33px 0 27px 27px;
+}
+
+.rhc-services__card--doctor-consultation .rhc-services__card-icon {
+  flex-shrink: 0;
+}
+
+.rhc-services__card--doctor-consultation .rhc-services__card-copy {
+  padding-top: 7px;
+}
+
+.rhc-services__card--doctor-consultation h3 {
+  font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+}
+
+.rhc-services__card--doctor-consultation .rhc-services__description {
+  max-width: 225px;
+  margin-top: 14px;
+  font-size: 0.9375rem;
+}
+
+.rhc-services__card--doctor-consultation .rhc-services__read-more {
+  margin-top: 17px;
+}
+
+.rhc-services__card--online-consultation {
+  background: #043965;
+  border-color: #135a87;
+}
+
+.rhc-services__card--online-consultation .rhc-services__card-image {
+  width: 76%;
+  left: auto;
+  object-position: 54% center;
+}
+
+.rhc-services__card--online-consultation::after {
+  background: linear-gradient(
+    90deg,
+    #042449 0%,
+    #074c7c 29%,
+    rgb(5 66 111 / 90%) 43%,
+    rgb(5 66 111 / 30%) 65%,
+    transparent 90%
+  );
+}
+
+.rhc-services__card--online-consultation .rhc-services__card-content {
+  width: 58%;
+}
+
+.rhc-services__card--online-consultation .rhc-services__card-icon {
+  color: #73e6ff;
+  background: rgb(87 202 242 / 15%);
+  border-color: #3888b7;
+  box-shadow: inset 0 1px 4px rgb(115 230 255 / 12%);
+}
+
+.rhc-services__card--online-consultation h3 {
+  color: #fff;
+}
+
+.rhc-services__card--online-consultation .rhc-services__category {
+  color: #c1eafb;
+}
+
+.rhc-services__card--online-consultation .rhc-services__description {
+  color: #e0f0fb;
+  max-width: 180px;
+}
+
+.rhc-services__card--online-consultation .rhc-services__read-more {
+  color: #78e8ff;
+}
+
+.rhc-services__card--online-consultation button:focus-visible {
+  outline-color: #78e8ff;
+}
+
+.rhc-services__card--hair-care .rhc-services__card-image {
+  object-position: 56% center;
+}
+
+.rhc-services__card--weight-loss .rhc-services__card-image {
+  object-position: 60% center;
+}
+
+.rhc-services__card:focus-within {
+  border-color: #4b94df;
+  box-shadow: 0 0 0 2px rgb(0 88 230 / 12%);
+}
+
+/* Contact guidance */
+
+.rhc-services__contact-strip {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 19px;
+  padding: 16px 26px;
+  border: 1px solid #c8edf7;
+  border-radius: 16px;
+  background: linear-gradient(110deg, #dbf6fd, #c9f0fa);
+}
+
+.rhc-services__contact-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 60px;
+  height: 60px;
+  color: #0065df;
+  background: #b5eaf7;
+  border-radius: 50%;
+}
+
+.rhc-services__contact-strip > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.rhc-services__contact-strip h3 {
+  font-size: 1.0625rem;
+  font-weight: 780;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.rhc-services__contact-strip p {
+  margin-top: 3px;
+  color: #426384;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.rhc-services__contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  flex-shrink: 0;
+  min-height: 47px;
+  padding: 11px 20px;
+  border: 1px solid #c0e4f4;
+  border-radius: 9px;
+  color: #0644a2;
+  background: #fff;
+  font-size: 0.8125rem;
+  font-weight: 750;
+  line-height: 1.5;
+  transition:
+    transform 250ms var(--service-ease),
+    box-shadow 250ms ease;
+}
+
+/* Large Online Consultation section */
+
+.rhc-services__online {
+  display: grid;
+  grid-template-columns: 1.06fr 1fr;
+  overflow: hidden;
+  margin-top: 21px;
+  border: 1px solid #dbeaf3;
+  border-radius: 18px;
+  background: linear-gradient(
+    110deg,
+    #ffffff 45%,
+    #f4fbff 100%
+  );
+  box-shadow: 0 10px 28px -24px rgb(8 35 76 / 22%);
+}
+
+.rhc-services__online-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 346px;
+}
+
+.rhc-services__online-visual > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: 57% center;
+}
+
+.rhc-services__online-badge {
+  position: absolute;
+  bottom: 22px;
+  left: 23px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100% - 46px);
+  padding: 12px 15px;
+  border: 1px solid #c4e4f2;
+  border-radius: 11px;
+  color: #0b4b76;
+  background: rgb(248 253 255 / 94%);
+  box-shadow: 0 4px 20px rgb(2 51 82 / 10%);
+  font-size: 0.75rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.rhc-services__online-copy {
+  min-width: 0;
+  padding: 30px 34px;
+}
+
+.rhc-services__online h2 {
+  margin-top: 10px;
+}
+
+.rhc-services__online-copy > p:not(.rhc-services__eyebrow) {
+  margin-top: 12px;
+  color: var(--service-copy);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.rhc-services__checklist {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin-top: 16px;
+  list-style: none;
+}
+
+.rhc-services__checklist li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #456986;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.rhc-services__checklist svg {
+  width: 22px;
+  height: 22px;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff;
+  background: #008aa4;
+}
+
+.rhc-services__online .rhc-services__button {
+  margin-top: 23px;
+}
+
+/* Why choose us */
+
+.rhc-services__why {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 41px;
+  padding-block: 35px 27px;
+}
+
+.rhc-services__why-heading {
+  position: relative;
+  padding-top: 5px;
+  min-width: 0;
+}
+
+.rhc-services__why h2 {
+  position: relative;
+  z-index: 1;
+  margin-top: 12px;
+}
+
+.rhc-services__why-heart {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  color: #cce7ff;
+  transform: rotate(-7deg);
+  pointer-events: none;
+}
+
+.rhc-services__reasons {
+  list-style: none;
+  padding: 0 0 0 25px;
+  border-left: 1px solid #d6eafa;
+}
+
+.rhc-services__reasons li {
+  display: grid;
+  grid-template-columns: 28px 1fr 1.03fr;
+  gap: 16px;
+  align-items: center;
+  min-height: 48px;
+  padding: 11px 0;
+}
+
+.rhc-services__reasons li + li {
+  border-top: 1px solid #ddeef7;
+}
+
+.rhc-services__reasons svg {
+  color: #0565e6;
+}
+
+.rhc-services__reasons h3 {
+  font-size: 0.8125rem;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.rhc-services__reasons p {
+  color: #536f89;
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
+
+/* Process */
+
+.rhc-services__process > h2 {
+  margin-top: 6px;
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.rhc-services__steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 21px;
+  padding: 0;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.rhc-services__steps li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  min-width: 0;
+}
+
+.rhc-services__steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 28px;
+  left: 42px;
+  width: 100%;
+  height: 1px;
+  background: #b7dcfa;
+}
+
+.rhc-services__step-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 58px;
+  height: 58px;
+  border: 1px solid #bfe6ff;
+  border-radius: 50%;
+  color: #005de3;
+  background: #e2f5ff;
+}
+
+.rhc-services__steps li > div {
+  min-width: 0;
+  flex: 1;
+  padding-top: 4px;
+}
+
+.rhc-services__step-number {
+  display: block;
+  padding-bottom: 14px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rhc-services__steps h3 {
+  margin-top: 1px;
+  font-size: 0.8125rem;
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.rhc-services__steps p {
+  max-width: 184px;
+  margin-top: 6px;
+  color: #536f90;
+  font-size: 0.75rem;
+  line-height: 1.65;
+}
+
+/* Final appointment CTA */
+
+.rhc-services__final-cta {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px;
+  overflow: hidden;
+  margin-top: 34px;
+  padding: 30px 34px;
+  border: 1px solid #18618b;
+  border-radius: 21px;
+  background:
+    radial-gradient(ellipse at 97% -10%, #03b2ce, transparent 45%),
+    linear-gradient(110deg, #071e42, #053565 75%, #064775);
+}
+
+.rhc-services__final-cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -110px;
+  bottom: -300px;
+  width: 620px;
+  height: 430px;
+  border: 1px solid rgb(156 228 250 / 24%);
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  box-shadow:
+    0 0 0 31px rgb(122 208 247 / 5%),
+    0 0 0 64px rgb(122 208 247 / 4%);
+  pointer-events: none;
+}
+
+.rhc-services__final-cta h2 {
+  color: #fff;
+  font-size: clamp(1.4rem, 2.15vw, 1.85rem);
+  font-weight: 780;
+  line-height: 1.13;
+  letter-spacing: -0.035em;
+}
+
+.rhc-services__final-cta h2 span {
+  color: #7be1ef;
+}
+
+.rhc-services__final-cta p {
+  margin-top: 10px;
+  color: #d2e8f6;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.rhc-services__final-cta .rhc-services__actions {
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.rhc-services__final-cta .rhc-services__button {
+  padding-inline: 19px;
+  font-size: 0.75rem;
+}
+
+.rhc-services__final-cta .rhc-services__button--outline {
+  min-width: 118px;
+}
+
+.rhc-services__cta-cross {
+  position: absolute;
+  z-index: -1;
+  top: 19px;
+  left: 50%;
+  color: #127db4;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.rhc-services__final-cta a:focus-visible {
+  outline-color: #84efff;
+}
+
+/* Service details dialog */
+
+.rhc-services .rhc-services__dialog {
+  width: min(570px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #cce1f1;
+  border-radius: 24px;
+  color: var(--service-ink);
+  background: #fff;
+  box-shadow: 0 30px 100px rgb(1 20 51 / 30%);
+  text-align: left;
+}
+
+.rhc-services__dialog::backdrop {
+  background: rgb(3 19 43 / 62%);
+  backdrop-filter: blur(7px);
+}
+
+.rhc-services__dialog-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 9px 16px 9px 29px;
+  border-bottom: 1px solid #dceaf4;
+  color: #436884;
+  background: #f8fcff;
+}
+
+.rhc-services__dialog-toolbar > span {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+}
+
+.rhc-services__dialog-toolbar button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  flex-shrink: 0;
+  border: 1px solid #d4e5f0;
+  border-radius: 12px;
+  color: #174e7a;
+  background: #fff;
+}
+
+.rhc-services__dialog-body {
+  padding: 28px;
+}
+
+.rhc-services__dialog-icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border: 1px solid #c4dfef;
+  border-radius: 21px;
+  color: #0766af;
+  background: linear-gradient(135deg, #f0f7ff, #daf0f5);
+}
+
+.rhc-services__dialog-eyebrow {
+  margin-top: 25px;
+  color: #0a7b8c;
+  font-size: 0.625rem;
+  font-weight: 800;
+  line-height: 1.7;
+  letter-spacing: 0.13em;
+}
+
+.rhc-services .rhc-services__dialog h2 {
+  margin-top: 9px;
+  color: #0b2c55;
+  font-size: 1.9375rem;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.rhc-services__dialog-description {
+  margin-top: 16px;
+  color: #4d6780;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+.rhc-services__dialog-points {
+  display: grid;
+  gap: 10px;
+  margin-top: 23px;
+  padding: 0;
+  list-style: none;
+}
+
+.rhc-services__dialog-points li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 13px;
+  border: 1px solid #dfebf3;
+  border-radius: 10px;
+  color: #3a5975;
+  background: #f5faff;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.rhc-services__dialog-points svg {
+  color: #007d89;
+}
+
+.rhc-services__dialog-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 50px;
+  margin-top: 25px;
+  padding: 13px 17px;
+  border: 1px solid #3578c3;
+  border-radius: 11px;
+  color: #fff;
+  background: linear-gradient(110deg, #0965d6, #073f91);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.rhc-services .rhc-services__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Scroll effects */
+
+.rhc-services[data-service-motion="ready"] [data-service-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 480ms var(--service-ease),
+    transform 480ms var(--service-ease);
+  transition-delay: var(--service-delay, 0ms);
+}
+
+.rhc-services[data-service-motion="ready"] [data-service-reveal].is-visible,
+.rhc-services[data-service-motion="ready"] [data-service-reveal]:focus-within {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hover effects */
+
+@media (hover: hover) and (pointer: fine) {
+  .rhc-services__card:hover {
+    transform: translateY(-5px);
+    border-color: #99cbee;
+    box-shadow: 0 18px 32px -20px rgb(0 65 125 / 35%);
+  }
+
+  .rhc-services__card:hover .rhc-services__card-image {
+    transform: scale(1.045);
+  }
+
+  .rhc-services__read-more:hover > svg {
+    transform: translateX(4px);
+  }
+
+  .rhc-services__read-more:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .rhc-services__button:hover,
+  .rhc-services__contact-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -13px rgb(0 36 81 / 42%);
+  }
+
+  .rhc-services__button--outline:hover {
+    background: rgb(255 255 255 / 12%);
+  }
+
+  .rhc-services__breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .rhc-services__dialog-toolbar button:hover {
+    border-color: #8abce0;
+    background: #edf7fd;
+  }
+}
+
+/* Laptop */
+
+@media (max-width: 1100px) {
+  .rhc-services__hero { min-height: 394px; }
+  .rhc-services__hero-badge { right: 6%; }
+  .rhc-services__hero-cross { display: none; }
+
+  .rhc-services__intro { gap: 26px; }
+  .rhc-services__highlights li { padding-inline: 10px; }
+  .rhc-services__grid { gap: 14px; }
+
+  .rhc-services__card-content {
+    padding-left: 19px;
+    width: 70%;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-content {
+    gap: 13px;
+    padding-left: 21px;
+    width: 59%;
+  }
+
+  .rhc-services__card--online-consultation .rhc-services__card-content {
+    width: 60%;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-icon svg {
+    width: 25px;
+  }
+
+  .rhc-services__online-copy { padding: 26px; }
+
+  .rhc-services__why {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 24px;
+  }
+
+  .rhc-services__why-heart {
+    width: 128px;
+    height: 128px;
+    right: -8px;
+    opacity: 0.7;
+  }
+
+  .rhc-services__steps { gap: 17px; }
+  .rhc-services__steps li { gap: 12px; }
+
+  .rhc-services__step-icon {
+    flex-basis: 49px;
+    height: 49px;
+  }
+
+  .rhc-services__steps li:not(:last-child)::after {
+    top: 24px;
+  }
+
+  .rhc-services__final-cta { padding-inline: 27px; }
+
+  .rhc-services__final-cta .rhc-services__actions {
+    flex-shrink: 1;
+    justify-content: flex-end;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .rhc-services__hero-copy { max-width: 565px; }
+
+  .rhc-services__hero-badge {
+    top: 51px;
+    right: 0;
+    padding: 9px 12px;
+    font-size: 0.625rem;
+  }
+
+  .rhc-services__lead {
+    max-width: 410px;
+    font-size: 0.9375rem;
+  }
+
+  .rhc-services__intro {
+    grid-template-columns: 1fr;
+    padding-block: 34px;
+    gap: 26px;
+  }
+
+  .rhc-services__highlights { padding-block: 21px; }
+  .rhc-services__highlights p { max-width: 180px; }
+  .rhc-services__desktop-break { display: none; }
+
+  .rhc-services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+  }
+
+  .rhc-services__item { grid-column: auto; }
+
+  .rhc-services__item--doctor-consultation,
+  .rhc-services__item--online-consultation {
+    grid-column: 1 / -1;
+  }
+
+  .rhc-services__card--doctor-consultation,
+  .rhc-services__card--online-consultation {
+    min-height: 260px;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-content {
+    padding: 29px;
+    width: 56%;
+  }
+
+  .rhc-services__card--online-consultation .rhc-services__card-content {
+    width: 50%;
+    padding-left: 28px;
+  }
+
+  .rhc-services__card--online-consultation .rhc-services__card-image {
+    width: 65%;
+    object-position: center;
+  }
+
+  .rhc-services__card--online-consultation::after {
+    background: linear-gradient(
+      90deg,
+      #042449 0%,
+      #08436d 29%,
+      rgb(5 62 107 / 77%) 42%,
+      transparent 80%
+    );
+  }
+
+  .rhc-services__card--doctor-consultation h3 {
+    font-size: 1.5rem;
+  }
+
+  .rhc-services__card--online-consultation h3 {
+    font-size: 1.375rem;
+  }
+
+  .rhc-services__contact-strip {
+    gap: 15px;
+    padding: 17px 20px;
+  }
+
+  .rhc-services__contact-icon {
+    flex-basis: 49px;
+    height: 49px;
+  }
+
+  .rhc-services__contact-link { padding: 10px 14px; }
+  .rhc-services__online-copy { padding: 25px; }
+  .rhc-services__online h2 { font-size: 1.875rem; }
+
+  .rhc-services__online-badge {
+    left: 15px;
+    bottom: 15px;
+    max-width: calc(100% - 30px);
+    padding: 10px;
+    font-size: 0.625rem;
+  }
+
+  .rhc-services__why {
+    grid-template-columns: 0.7fr 1.2fr;
+  }
+
+  .rhc-services__why-heart {
+    width: 96px;
+    right: 0;
+    bottom: -8px;
+    opacity: 0.6;
+  }
+
+  .rhc-services__reasons { padding-left: 20px; }
+
+  .rhc-services__reasons li {
+    grid-template-columns: 23px 1fr;
+    column-gap: 13px;
+    row-gap: 4px;
+  }
+
+  .rhc-services__reasons li > svg { grid-row: span 2; }
+  .rhc-services__reasons p { grid-column: 2; }
+
+  .rhc-services__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 24px;
+    column-gap: 30px;
+  }
+
+  .rhc-services__steps li:nth-child(2)::after {
+    display: none;
+  }
+
+  .rhc-services__steps p { max-width: 220px; }
+
+  .rhc-services__final-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .rhc-services__final-cta h2 { font-size: 1.875rem; }
+
+  .rhc-services__final-cta .rhc-services__actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 620px) {
+  .rhc-services { padding-bottom: 25px; }
+
+  .rhc-services__hero {
+    min-height: 0;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .rhc-services__hero-inner {
+    padding-top: 21px;
+    padding-bottom: 234px;
+  }
+
+  .rhc-services__hero-copy { margin-top: 25px; }
+
+  .rhc-services__hero-image {
+    inset: auto 0 0;
+    width: 100%;
+    height: 244px;
+    object-position: 67% 65%;
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 32%);
+    mask-image: linear-gradient(180deg, transparent, #000 32%);
+  }
+
+  .rhc-services__hero::after {
+    background: linear-gradient(
+      180deg,
+      #06264d 0%,
+      #07305e 42%,
+      rgb(7 48 94 / 88%) 58%,
+      rgb(7 48 94 / 10%) 79%,
+      transparent 100%
+    );
+  }
+
+  .rhc-services .rhc-services__hero :where(h1, h2) {
+    font-size: clamp(2rem, 7.6vw, 2.7rem);
+    line-height: 1.07;
+    letter-spacing: -0.045em;
+  }
+
+  .rhc-services__lead {
+    max-width: 360px;
+    font-size: 0.875rem;
+    margin-top: 16px;
+  }
+
+  .rhc-services__hero .rhc-services__actions {
+    margin-top: 20px;
+  }
+
+  .rhc-services__button {
+    padding-inline: 17px;
+    font-size: 0.75rem;
+  }
+
+  .rhc-services__button--outline { min-width: 117px; }
+
+  .rhc-services__hero-badge {
+    top: auto;
+    right: 0;
+    bottom: 143px;
+    border-radius: 10px;
+  }
+
+  .rhc-services__hero-badge > span {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rhc-services__hero-badge svg { width: 17px; }
+
+  .rhc-services__eyebrow {
+    font-size: 0.5625rem;
+    letter-spacing: 0.15em;
+  }
+
+  .rhc-services__intro h2,
+  .rhc-services__why h2 {
+    font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+    line-height: 1.13;
+  }
+
+  .rhc-services__intro-copy > p:last-child {
+    font-size: 0.875rem;
+  }
+
+  .rhc-services__highlights {
+    border-radius: 16px;
+    padding: 18px 5px;
+  }
+
+  .rhc-services__highlights li { padding-inline: 8px; }
+
+  .rhc-services__highlights li > span {
+    width: 48px;
+    height: 48px;
+  }
+
+  .rhc-services__highlights li > span svg { width: 25px; }
+  .rhc-services__highlights h3 { font-size: 0.75rem; }
+
+  .rhc-services__highlights p {
+    font-size: 0.6875rem;
+    line-height: 1.65;
+  }
+
+  .rhc-services__collection-heading { padding-bottom: 23px; }
+  .rhc-services__collection-heading h2 { font-size: 1.625rem; }
+  .rhc-services__section-note { font-size: 0.8125rem; }
+
+  .rhc-services__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .rhc-services__item--doctor-consultation,
+  .rhc-services__item--online-consultation {
+    grid-column: auto;
+  }
+
+  .rhc-services__card { min-height: 275px; }
+
+  .rhc-services__card-content {
+    width: 67%;
+    padding: 22px 0 16px 23px;
+  }
+
+  .rhc-services__card h3 { font-size: 1.3rem; }
+
+  .rhc-services__description {
+    max-width: 177px;
+    font-size: 0.875rem;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-content {
+    display: block;
+    width: 69%;
+    padding: 22px 0 16px 23px;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-icon {
+    width: 53px;
+    height: 53px;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-icon svg {
+    width: 29px;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-copy {
+    padding-top: 13px;
+  }
+
+  .rhc-services__card--doctor-consultation h3 {
+    font-size: 1.3rem;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__description {
+    max-width: 181px;
+    margin-top: 10px;
+    font-size: 0.875rem;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__read-more {
+    margin-top: 9px;
+  }
+
+  .rhc-services__card--doctor-consultation .rhc-services__card-image {
+    width: 100%;
+    object-position: 64% center;
+  }
+
+  .rhc-services__card--doctor-consultation::after {
+    background: linear-gradient(
+      90deg,
+      #f3faff,
+      rgb(243 250 255 / 96%) 35%,
+      rgb(243 250 255 / 52%) 63%,
+      transparent 92%
+    );
+  }
+
+  .rhc-services__card--online-consultation .rhc-services__card-content {
+    width: 61%;
+    padding-left: 23px;
+  }
+
+  .rhc-services__card--online-consultation .rhc-services__card-image {
+    width: 81%;
+    object-position: 55% center;
+  }
+
+  .rhc-services__card--online-consultation::after {
+    background: linear-gradient(
+      90deg,
+      #042449 0%,
+      #07476f 29%,
+      rgb(5 62 107 / 81%) 45%,
+      rgb(5 62 107 / 18%) 74%,
+      transparent 95%
+    );
+  }
+
+  .rhc-services__card--online-consultation h3 {
+    font-size: 1.3rem;
+  }
+
+  .rhc-services__contact-strip {
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 13px;
+  }
+
+  .rhc-services__contact-strip > div {
+    flex-basis: calc(100% - 67px);
+  }
+
+  .rhc-services__contact-strip h3 { font-size: 1rem; }
+  .rhc-services__contact-strip p { font-size: 0.75rem; }
+  .rhc-services__contact-link { width: 100%; }
+
+  .rhc-services__online {
+    grid-template-columns: 1fr;
+    margin-top: 22px;
+  }
+
+  .rhc-services__online-visual {
+    min-height: 0;
+    aspect-ratio: 1.5;
+  }
+
+  .rhc-services__online-copy { padding: 26px 23px; }
+  .rhc-services__online h2 { font-size: 1.9rem; }
+  .rhc-services__online .rhc-services__button { width: 100%; }
+  .rhc-services__online-badge { font-size: 0.625rem; }
+
+  .rhc-services__why {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    padding-block: 31px;
+  }
+
+  .rhc-services__why-heart {
+    width: 128px;
+    height: 128px;
+    bottom: -13px;
+    right: 9px;
+    opacity: 0.85;
+  }
+
+  .rhc-services__reasons {
+    padding: 0;
+    border-left: 0;
+  }
+
+  .rhc-services__reasons li {
+    grid-template-columns: 28px 1fr;
+    column-gap: 17px;
+    padding-block: 13px;
+  }
+
+  .rhc-services__reasons h3 { font-size: 0.875rem; }
+  .rhc-services__reasons p { font-size: 0.8125rem; }
+  .rhc-services__process > h2 { font-size: 1.625rem; }
+  .rhc-services__steps { column-gap: 19px; }
+  .rhc-services__steps li { display: block; }
+
+  .rhc-services__steps li:not(:last-child)::after {
+    left: 41px;
+    top: 24px;
+  }
+
+  .rhc-services__step-icon { width: 49px; }
+  .rhc-services__steps li > div { padding-top: 13px; }
+
+  .rhc-services__step-number {
+    padding-bottom: 8px;
+    font-size: 0.75rem;
+  }
+
+  .rhc-services__steps h3 { font-size: 0.8125rem; }
+  .rhc-services__steps p { font-size: 0.75rem; }
+
+  .rhc-services__final-cta {
+    padding: 27px 23px;
+    border-radius: 17px;
+  }
+
+  .rhc-services__final-cta h2 {
+    font-size: 1.625rem;
+    line-height: 1.17;
+  }
+
+  .rhc-services__final-cta .rhc-services__actions,
+  .rhc-services__final-cta .rhc-services__button {
+    width: 100%;
+  }
+
+  .rhc-services__dialog-body { padding: 24px 20px; }
+  .rhc-services__dialog-toolbar { padding-left: 20px; }
+
+  .rhc-services .rhc-services__dialog h2 {
+    font-size: 1.625rem;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 360px) {
+  .rhc-services { --service-gutter: 16px; }
+  .rhc-services__hero .rhc-services__actions { gap: 10px; }
+  .rhc-services__hero .rhc-services__button { padding-inline: 13px; }
+  .rhc-services__hero .rhc-services__button--outline { min-width: 102px; }
+  .rhc-services__highlights { padding-inline: 3px; }
+  .rhc-services__highlights li { padding-inline: 6px; }
+
+  .rhc-services__card-content,
+  .rhc-services__card--doctor-consultation .rhc-services__card-content {
+    width: 73%;
+    padding-left: 20px;
+  }
+
+  .rhc-services__card--online-consultation .rhc-services__card-content {
+    width: 65%;
+    padding-left: 20px;
+  }
+
+  .rhc-services__card h3 { font-size: 1.1875rem; }
+  .rhc-services__description { max-width: 165px; }
+
+  .rhc-services__why-heart {
+    width: 98px;
+    right: -2px;
+    opacity: 0.5;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .rhc-services *,
+  .rhc-services *::before,
+  .rhc-services *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .rhc-services[data-service-motion="ready"] [data-service-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .rhc-services__card:hover,
+  .rhc-services__card:hover .rhc-services__card-image,
+  .rhc-services__button:hover,
+  .rhc-services__contact-link:hover,
+  .rhc-services__read-more:hover > svg {
+    transform: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .rhc-services__card,
+  .rhc-services__button,
+  .rhc-services__contact-link {
+    border: 1px solid ButtonText;
+  }
+}

@@ -1,0 +1,1056 @@
+/* Royal Health Care — Home Care
+   Replace the existing Home_Care.css with this complete file.
+   All nine image imports stay in HomeCare.jsx. */
+
+/* BASE */
+.home-care {
+  --hc-navy: #10294e;
+  --hc-blue: #075cf2;
+  --hc-cyan: #70ecf5;
+  --hc-muted: #536985;
+  --hc-line: #dfebf5;
+  color: var(--hc-navy);
+  background: #fff;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.home-care *,
+.home-care *::before,
+.home-care *::after {
+  box-sizing: border-box;
+}
+
+.home-care a {
+  text-decoration: none;
+}
+
+.home-care svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.hc-container {
+  width: min(1200px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.home-care h1,
+.home-care h2,
+.home-care h3,
+.home-care p {
+  margin: 0;
+}
+
+.home-care h1,
+.home-care h2,
+.home-care h3 {
+  font-family: inherit;
+  font-weight: 750;
+  color: inherit;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+.home-care strong {
+  font-weight: 700;
+}
+
+.home-care h2 {
+  font-size: clamp(1.85rem, 3vw, 2.7rem);
+  letter-spacing: -.045em;
+  line-height: 1.16;
+}
+
+.home-care h2 span {
+  color: var(--hc-blue);
+}
+
+/* SECTION LABELS */
+.home-care .hc-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #0561ef;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-weight: 750;
+  font-size: .68rem !important;
+  line-height: 1.4 !important;
+}
+
+.hc-eyebrow span {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border: 3px solid #b5f5fb;
+  border-radius: 50%;
+  background: #009ab8;
+  box-shadow: 0 0 0 2px #e5faff;
+}
+
+/* BUTTONS */
+.hc-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 49px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.01em;
+  white-space: nowrap;
+  transition:
+    transform .2s,
+    box-shadow .2s,
+    background .2s,
+    border-color .2s;
+}
+
+.hc-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px #001a4b26;
+}
+
+.hc-button svg,
+.hc-card-content a svg {
+  transition: transform .2s ease;
+}
+
+.hc-button:hover svg,
+.hc-card-content a:hover svg {
+  transform: translateX(3px);
+}
+
+.hc-button:focus-visible,
+.home-care a:focus-visible {
+  outline: 3px solid #58dceb;
+  outline-offset: 3px;
+}
+
+.hc-button-white {
+  background: #fff;
+  color: #0757df;
+  box-shadow: 0 6px 18px #001e4a14;
+}
+
+.hc-button-primary {
+  background: linear-gradient(135deg, #146af4, #0751d4);
+  color: #fff;
+  box-shadow: 0 10px 20px #075cf233;
+}
+
+.hc-button-outline {
+  border-color: #ffffff70;
+  background: #ffffff0a;
+  color: #fff;
+}
+
+.hc-button-outline:hover {
+  border-color: #ffffffc7;
+  background: #ffffff1c;
+}
+
+/* HERO */
+.hc-hero {
+  position: relative;
+  min-height: 480px;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 0 0 24px 24px;
+  background:
+    linear-gradient(
+      105deg,
+      #031a40 0%,
+      #073568 55%,
+      #b7d2dc 100%);
+}
+
+.hc-hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  /* Background photo is assigned in HomeCare.jsx. */
+  background-size: cover;
+  background-position: center top;
+}
+
+.hc-hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      #061d43fc 0%,
+      #092b58f2 30%,
+      #0c356f80 53%,
+      #06214c0a 80%);
+}
+
+.hc-hero-inner {
+  position: relative;
+  min-height: 480px;
+  padding-top: 26px;
+  padding-bottom: 44px;
+}
+
+.hc-breadcrumb {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #c1d6ef;
+  font-size: .76rem;
+  font-weight: 500;
+}
+
+.hc-breadcrumb a {
+  color: #fff;
+}
+
+.hc-hero-copy {
+  padding-top: 42px;
+  max-width: 550px;
+  color: #fff;
+}
+
+.hc-hero .hc-eyebrow {
+  color: #6deafa;
+}
+
+.home-care .hc-hero h1 {
+  font-size: clamp(3.3rem, 6vw, 5.1rem);
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: 1.01;
+  margin: 16px 0 19px;
+  text-wrap: initial;
+}
+
+.hc-hero h1 span {
+  color: #85edf7;
+}
+
+.hc-hero-copy > p {
+  max-width: 455px;
+  color: #e1eaf6;
+  line-height: 1.65;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+}
+
+.hc-hero-copy > .hc-eyebrow {
+  color: #6deafa;
+}
+
+.hc-actions {
+  display: flex;
+  gap: 13px;
+  margin-top: 27px;
+}
+
+.hc-hero-note {
+  position: absolute;
+  right: 3%;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border: 1px solid #ffffffd9;
+  border-radius: 14px;
+  background: #fffffff0;
+  backdrop-filter: blur(12px);
+  color: #082456;
+  box-shadow: 0 10px 25px #0b35602b;
+  font-size: .77rem;
+  font-weight: 650;
+}
+
+.hc-hero-note svg {
+  color: #075cf2;
+}
+
+/* INTRODUCTION */
+.hc-intro {
+  display: grid;
+  grid-template-columns: .91fr 1.09fr;
+  gap: 46px;
+  align-items: center;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.hc-intro h2 {
+  margin: 12px 0 15px;
+}
+
+.hc-intro > div > p:last-child {
+  max-width: 475px;
+  color: var(--hc-muted);
+  line-height: 1.7;
+  font-size: .94rem;
+}
+
+.hc-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 25px 13px;
+  border: 1px solid #e0eef7;
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      120deg,
+      #eff9ff,
+      #f9fcff 60%,
+      #eef9fd);
+  box-shadow: 0 10px 30px #143c6605;
+}
+
+.hc-benefit {
+  text-align: center;
+  padding: 4px 14px 6px;
+}
+
+.hc-benefit + .hc-benefit {
+  border-left: 1px solid #d5e8f4;
+}
+
+.hc-round-icon,
+.hc-card-icon,
+.hc-step-icon {
+  display: grid;
+  place-items: center;
+  color: #0865f6;
+  border: 1px solid #dcebf8;
+  background: #fff;
+  box-shadow: 0 5px 12px #1e558a08;
+}
+
+.hc-round-icon {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  margin: 0 auto 13px;
+}
+
+.hc-benefit strong {
+  display: block;
+  font-size: .84rem;
+  line-height: 1.35;
+}
+
+.hc-benefit p {
+  color: var(--hc-muted);
+  font-size: .8rem;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+/* SERVICE CARDS */
+.hc-services {
+  scroll-margin-top: 120px;
+}
+
+.hc-section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hc-section-heading .hc-eyebrow {
+  justify-content: center;
+}
+
+.hc-section-heading h2 {
+  margin: 10px 0 9px;
+}
+
+.hc-section-heading > p:last-child {
+  color: var(--hc-muted);
+  font-size: .94rem;
+}
+
+.hc-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hc-service-card {
+  min-height: 266px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid #dfeaf4;
+  border-radius: 18px;
+  background-color: #eaf7fc;
+  background-image:
+    linear-gradient(
+      90deg,
+      #f5fbfffc 0%,
+      #f5fbffeb 34%,
+      #f5fbff9e 57%,
+      #f5fbff0a 85%),
+    var(--hc-card-image);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 5px 16px #153f6908;
+  transition: transform .22s, box-shadow .22s, border-color .22s;
+}
+
+.hc-service-card:hover,
+.hc-service-card:focus-within {
+  transform: translateY(-4px);
+  border-color: #abcdf4;
+  box-shadow: 0 16px 32px #083d701a;
+}
+
+.hc-card-icon {
+  width: 49px;
+  height: 49px;
+  border-radius: 14px;
+  background: #ffffffeb;
+}
+
+.hc-card-content {
+  max-width: 63%;
+}
+
+.hc-card-content h3 {
+  font-size: 1.08rem;
+  letter-spacing: -.03em;
+  line-height: 1.3;
+}
+
+.hc-card-content p {
+  font-size: .84rem;
+  line-height: 1.55;
+  color: #455c7b;
+  margin: 8px 0 15px;
+}
+
+.hc-card-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #075cf2;
+  min-height: 28px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.hc-card-content a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* HELP STRIP */
+.hc-help-strip {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: 20px;
+  padding: 17px 22px;
+  border: 1px solid #d2edf6;
+  border-radius: 16px;
+  background:
+    linear-gradient(
+      100deg,
+      #edfaff,
+      #e5f8fe 55%,
+      #f1fcff);
+}
+
+.hc-help-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid #d1edf9;
+  background: #ffffffd9;
+  color: #075cf2;
+}
+
+.hc-help-strip strong {
+  font-size: 1rem;
+}
+
+.hc-help-strip p {
+  margin-top: 3px;
+  color: var(--hc-muted);
+  font-size: .84rem;
+}
+
+.hc-help-strip .hc-button {
+  margin-left: auto;
+  border-color: #d5e8f5;
+}
+
+/* CARE SUPPORT */
+.hc-feature {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  min-height: 350px;
+  margin-top: 34px;
+  border: 1px solid #e0edf5;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #eaf7fc;
+  box-shadow: 0 10px 28px #173f6508;
+}
+
+.hc-feature-image {
+  min-height: 350px;
+  background-color: #d8eff8;
+  /* Background photo is assigned in HomeCare.jsx. */
+  background-size: cover;
+  background-position: center;
+}
+
+.hc-feature-copy {
+  padding: 36px clamp(26px, 3vw, 44px);
+  background:
+    linear-gradient(
+      105deg,
+      #f8fcff,
+      #eef9fe);
+}
+
+.hc-feature-copy h2 {
+  margin: 12px 0;
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+}
+
+.hc-feature-copy > p {
+  color: var(--hc-muted);
+  font-size: .92rem;
+  line-height: 1.65;
+}
+
+.hc-feature-copy ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 23px;
+  display: grid;
+  gap: 9px;
+}
+
+.hc-feature-copy li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #405a7a;
+  font-size: .85rem;
+}
+
+.hc-feature-copy li svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 50%;
+  color: white;
+  background: #078faa;
+  flex: none;
+}
+
+/* WHY CHOOSE US */
+.hc-values {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+  padding-top: 56px;
+  padding-bottom: 48px;
+}
+
+.hc-values h2 {
+  margin-top: 12px;
+}
+
+.hc-value-list {
+  padding: 8px 24px;
+  border: 1px solid #e3edf6;
+  border-radius: 18px;
+  background: linear-gradient(130deg, #f8fcff, #f1f8fc);
+}
+
+.hc-value {
+  display: grid;
+  grid-template-columns: 28px minmax(145px, .85fr) 1fr;
+  gap: 13px;
+  align-items: center;
+  min-height: 62px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--hc-line);
+  font-size: .81rem;
+  line-height: 1.5;
+}
+
+.hc-value:last-child {
+  border-bottom: 0;
+}
+
+.hc-value svg {
+  color: #0865f6;
+}
+
+.hc-value strong {
+  font-size: .82rem;
+}
+
+.hc-value span {
+  color: var(--hc-muted);
+}
+
+/* BOOKING STEPS */
+.hc-steps {
+  padding-top: 4px;
+  padding-bottom: 48px;
+}
+
+.hc-steps h2 {
+  font-size: clamp(1.55rem, 2.6vw, 2.3rem);
+  margin: 11px 0 29px;
+}
+
+.hc-step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.hc-step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  position: relative;
+  padding-right: 14px;
+}
+
+.hc-step:not(:last-child):after {
+  content: "";
+  position: absolute;
+  left: 112px;
+  right: 16px;
+  top: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, #bdd9f3, #e5eff8);
+  z-index: 0;
+}
+
+.hc-step-icon {
+  position: relative;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  flex: none;
+  border-radius: 17px;
+  background: #f1f9ff;
+}
+
+.hc-step b {
+  position: absolute;
+  top: 17px;
+  left: 73px;
+  display: block;
+  color: #4b6c95;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.hc-step strong {
+  display: block;
+  font-size: .91rem;
+  line-height: 1.35;
+}
+
+.hc-step p {
+  color: var(--hc-muted);
+  max-width: 240px;
+  font-size: .84rem;
+  line-height: 1.6;
+  margin-top: 7px;
+}
+
+/* CONTACT BANNER */
+.hc-bottom-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 182px;
+  margin-bottom: 48px;
+  padding: 33px 36px;
+  border: 1px solid #285da5;
+  border-radius: 20px;
+  background-color: #061b42;
+  /* Blue booking background and overlay are assigned in HomeCare.jsx. */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 0 14px 32px #061b4221;
+}
+
+.hc-bottom-cta > div:first-child {
+  min-width: 0;
+}
+
+.hc-bottom-cta h2 {
+  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  letter-spacing: -.04em;
+  text-wrap: initial;
+}
+
+.hc-bottom-cta h2 span {
+  color: #74ecf7;
+}
+
+.hc-bottom-cta p {
+  max-width: 470px;
+  line-height: 1.5;
+  margin-top: 9px;
+  font-size: .89rem;
+  color: #d7e5f7;
+}
+
+.hc-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.hc-cta-actions small {
+  grid-column: 1/-1;
+  text-align: center;
+  color: #a3eff7;
+  font-size: .73rem;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .hc-container {
+    width: min(calc(100% - 38px), 740px);
+  }
+
+  .hc-intro,
+  .hc-feature,
+  .hc-values {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .hc-intro {
+    padding-top: 40px;
+  }
+
+  .hc-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hc-card-content {
+    max-width: 65%;
+  }
+
+  .hc-feature-image {
+    min-height: 300px;
+  }
+
+  .hc-feature {
+    gap: 0;
+  }
+
+  .hc-step-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+  }
+
+  .hc-step:nth-child(2):after {
+    display: none;
+  }
+
+  .hc-hero-note {
+    display: none;
+  }
+
+  .hc-hero-photo {
+    background-position: 65% top;
+  }
+
+  .hc-bottom-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hc-container {
+    width: calc(100% - 32px);
+  }
+
+  .hc-hero,
+  .hc-hero-inner {
+    min-height: 550px;
+  }
+
+  .hc-hero-photo {
+    background-size: auto 330px;
+    background-position: 85% top;
+    background-repeat: no-repeat;
+  }
+
+  .hc-hero:after {
+    background:
+      linear-gradient(
+        180deg,
+        #061d431f 0%,
+        #061d432e 18%,
+        #061d43eb 47%,
+        #061d43 62%),
+      linear-gradient(
+        90deg,
+        #061d4355,
+        transparent);
+  }
+
+  .hc-hero-inner {
+    padding-top: 21px;
+    padding-bottom: 34px;
+  }
+
+  .hc-hero-copy {
+    padding-top: 163px;
+  }
+
+  .home-care .hc-hero h1 {
+    font-size: clamp(3.1rem, 12.5vw, 4.15rem);
+    margin-top: 14px;
+    margin-bottom: 17px;
+  }
+
+  .hc-hero-copy > p {
+    max-width: 340px;
+  }
+
+  .hc-actions {
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-top: 23px;
+  }
+
+  .hc-actions .hc-button {
+    flex: 1 1 auto;
+  }
+
+  .hc-button {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+
+  .hc-intro {
+    padding-top: 38px;
+    padding-bottom: 42px;
+  }
+
+  .hc-benefits {
+    gap: 0;
+    padding: 20px 5px;
+  }
+
+  .hc-benefit {
+    padding: 0 6px;
+  }
+
+  .hc-benefit strong {
+    font-size: .73rem;
+  }
+
+  .hc-benefit p {
+    font-size: .71rem;
+  }
+
+  .hc-round-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hc-round-icon svg {
+    width: 22px;
+  }
+
+  .hc-service-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .hc-service-card {
+    min-height: 254px;
+    padding: 20px;
+    background-position: center 45%;
+  }
+
+  .hc-card-content {
+    max-width: 62%;
+  }
+
+  .hc-help-strip {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 13px;
+    padding: 18px;
+  }
+
+  .hc-help-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hc-help-strip > div {
+    min-width: 0;
+  }
+
+  .hc-help-strip strong {
+    display: block;
+    font-size: .92rem;
+    line-height: 1.4;
+  }
+
+  .hc-help-strip .hc-button {
+    grid-column: 1 / -1;
+    margin: 2px 0 0;
+  }
+
+  .hc-feature {
+    margin-top: 25px;
+  }
+
+  .hc-feature-image {
+    min-height: 240px;
+  }
+
+  .hc-feature-copy {
+    padding: 28px 22px;
+  }
+
+  .hc-values {
+    padding-top: 42px;
+    padding-bottom: 38px;
+  }
+
+  .hc-value-list {
+    padding: 7px 19px;
+  }
+
+  .hc-value {
+    grid-template-columns: 28px 1fr;
+    gap: 6px 9px;
+    padding: 10px 0;
+  }
+
+  .hc-value span {
+    grid-column: 2;
+  }
+
+  .hc-step-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hc-step {
+    flex-direction: row;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .hc-step b {
+    position: static;
+    margin: 0 0 4px;
+    font-size: .72rem;
+  }
+
+  .hc-step:not(:last-child):after {
+    display: block;
+    left: 28px;
+    right: auto;
+    top: 66px;
+    bottom: -16px;
+    width: 1px;
+    height: auto;
+    background: #d8e8f6;
+  }
+
+  .hc-step p {
+    max-width: none;
+    margin-top: 5px;
+  }
+
+  .hc-steps {
+    padding-bottom: 38px;
+  }
+
+  .hc-bottom-cta {
+    display: block;
+    padding: 28px 23px;
+    margin-bottom: 30px;
+  }
+
+  .hc-cta-actions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .hc-cta-actions .hc-button {
+    font-size: .86rem;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+}
+
+@media (max-width: 380px) {
+  .hc-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hc-card-content {
+    max-width: 68%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-care .hc-button,
+  .home-care .hc-service-card,
+  .home-care .hc-button svg,
+  .home-care .hc-card-content a svg {
+    transition: none;
+    transform: none;
+  }
+
+}

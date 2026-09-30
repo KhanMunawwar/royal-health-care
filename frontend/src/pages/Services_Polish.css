@@ -1,0 +1,127 @@
+.rhc-services .rhc-services__final-cta::before { border-color: rgb(170 235 251 / 23%); }
+.rhc-services .rhc-services__dialog { border-radius: 25px; }
+.rhc-services .rhc-services__dialog-toolbar { background: #edf6fc; }
+
+@media (hover: hover) and (pointer: fine) {
+  .rhc-services .rhc-services__card:hover {
+    transform: translateY(-6px);
+    border-color: #76b8de;
+    box-shadow: 0 23px 39px -21px rgb(4 57 113 / 33%), 0 5px 12px rgb(12 57 100 / 5%);
+  }
+  .rhc-services .rhc-services__card:hover .rhc-services__card-icon { transform: translateY(-2px) rotate(-4deg); }
+  .rhc-services .rhc-services__card:hover .rhc-services__card-image { transform: scale(1.045); }
+  .rhc-services .rhc-services__read-more:hover {
+    color: #fff;
+    background: #0759bd;
+    border-color: #0759bd;
+    text-decoration: none;
+    box-shadow: 0 9px 18px -10px rgb(0 66 156 / 50%);
+  }
+  .rhc-services .rhc-services__read-more:hover > svg { transform: translateX(3px); }
+  .rhc-services .rhc-services__button:hover,
+  .rhc-services .rhc-services__contact-link:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rhc-services .rhc-services__hero-badge { animation: rhc-service-label-float 5s ease-in-out infinite; }
+}
+@keyframes rhc-service-label-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 1100px) {
+  .rhc-services .rhc-services__grid { gap: 18px; }
+  .rhc-services .rhc-services__intro { gap: 25px; }
+  .rhc-services .rhc-services__highlights { gap: 7px; padding: 9px; }
+  .rhc-services .rhc-services__highlights li { padding: 17px 9px; }
+  .rhc-services .rhc-services__online-copy { padding: 31px 27px; }
+  .rhc-services .rhc-services__why { grid-template-columns: 0.8fr 1.2fr; gap: 20px; }
+  .rhc-services .rhc-services__why-heading { padding: 25px; }
+  .rhc-services .rhc-services__reasons li { padding: 18px 14px; gap: 8px; }
+  .rhc-services .rhc-services__steps li { padding: 20px; }
+  .rhc-services .rhc-services__step-number { right: 20px; }
+  .rhc-services .rhc-services__final-cta { padding: 31px 27px; }
+}
+@media (max-width: 900px) {
+  .rhc-services .rhc-services__intro { padding-block: 34px 32px; }
+  .rhc-services .rhc-services__hero-badge { padding: 10px 12px; }
+  .rhc-services .rhc-services__card--doctor-consultation,
+  .rhc-services .rhc-services__card--online-consultation { min-height: 295px; }
+  .rhc-services .rhc-services__why { grid-template-columns: 1fr; }
+  .rhc-services .rhc-services__why-heading { min-height: 200px; }
+  .rhc-services .rhc-services__why-heart { width: 160px; height: 160px; bottom: -10px; right: 28px; }
+  .rhc-services .rhc-services__reasons li { padding: 22px; column-gap: 14px; }
+  .rhc-services .rhc-services__highlights li { padding-inline: 15px; }
+  .rhc-services .rhc-services__contact-strip { padding: 19px 21px; }
+}
+@media (max-width: 620px) {
+  .rhc-services { padding-bottom: 28px; }
+  .rhc-services .rhc-services__hero { border-radius: 0 0 23px 23px; }
+  .rhc-services .rhc-services__hero-inner { padding-top: 22px; padding-bottom: 234px; }
+  .rhc-services .rhc-services__hero::after {
+    background: linear-gradient(180deg, #061f41 0%, #09345e 44%, rgb(8 48 88 / 87%) 58%, rgb(8 48 88 / 9%) 80%, transparent);
+  }
+  .rhc-services .rhc-services__hero-badge { padding: 9px 11px; border-radius: 11px; }
+  .rhc-services .rhc-services__button { border-radius: 10px; }
+  .rhc-services .rhc-services__intro { gap: 23px; }
+  .rhc-services .rhc-services__highlights { grid-template-columns: 1fr; gap: 8px; padding: 8px; border-radius: 18px; }
+  .rhc-services .rhc-services__highlights li { display: grid; grid-template-columns: 43px minmax(0, 1fr); align-items: center; gap: 4px 14px; padding: 15px; border-radius: 12px; text-align: left; }
+  .rhc-services .rhc-services__highlights li > span { grid-row: 1 / 3; margin: 0; width: 43px; height: 43px; border-radius: 13px; }
+  .rhc-services .rhc-services__highlights h3 { margin: 0; font-size: 0.875rem; }
+  .rhc-services .rhc-services__highlights p { max-width: none; margin: 0; font-size: 0.8125rem; }
+  .rhc-services .rhc-services__grid { gap: 20px; }
+  .rhc-services .rhc-services__card,
+  .rhc-services .rhc-services__card--doctor-consultation,
+  .rhc-services .rhc-services__card--online-consultation { min-height: 310px; border-radius: 21px; }
+  .rhc-services .rhc-services__card-content,
+  .rhc-services .rhc-services__card--doctor-consultation .rhc-services__card-content { padding-top: 24px; padding-bottom: 24px; }
+  .rhc-services .rhc-services__card--doctor-consultation .rhc-services__card-copy { padding-top: 16px; }
+  .rhc-services .rhc-services__card-icon,
+  .rhc-services .rhc-services__card--doctor-consultation .rhc-services__card-icon { width: 53px; height: 53px; }
+  .rhc-services .rhc-services__read-more { min-width: 132px; padding-inline: 13px; margin-top: 18px; }
+  .rhc-services .rhc-services__contact-strip { gap: 14px; padding: 19px; border-radius: 18px; }
+  .rhc-services .rhc-services__contact-icon { border-radius: 15px; }
+  .rhc-services .rhc-services__online { margin-top: 26px; border-radius: 22px; }
+  .rhc-services .rhc-services__online-copy { padding: 29px 23px; }
+  .rhc-services .rhc-services__why { padding-block: 28px; gap: 15px; }
+  .rhc-services .rhc-services__why-heading { min-height: 196px; padding: 25px; border-radius: 21px; }
+  .rhc-services .rhc-services__why-heart { width: 136px; height: 136px; right: 1px; bottom: -13px; opacity: 0.52; }
+  .rhc-services .rhc-services__reasons { grid-template-columns: 1fr; gap: 10px; }
+  .rhc-services .rhc-services__reasons li { padding: 19px 20px; column-gap: 13px; }
+  .rhc-services .rhc-services__steps { gap: 12px; }
+  .rhc-services .rhc-services__steps li { padding: 17px; border-radius: 17px; }
+  .rhc-services .rhc-services__step-icon { width: 44px; height: 44px; border-radius: 14px; }
+  .rhc-services .rhc-services__step-icon svg { width: 24px; height: 24px; }
+  .rhc-services .rhc-services__step-number { top: 21px; right: 15px; font-size: 1.125rem; }
+  .rhc-services .rhc-services__steps h3 { font-size: 0.8125rem; }
+  .rhc-services .rhc-services__steps p { font-size: 0.75rem; }
+  .rhc-services .rhc-services__final-cta { padding: 28px 23px; margin-top: 27px; border-radius: 22px; }
+}
+@media (max-width: 360px) {
+  .rhc-services .rhc-services__highlights { padding: 7px; gap: 7px; }
+  .rhc-services .rhc-services__highlights li { padding-inline: 12px; }
+  .rhc-services .rhc-services__highlights h3 { font-size: 0.8125rem; }
+  .rhc-services .rhc-services__highlights p { font-size: 0.78125rem; }
+  .rhc-services .rhc-services__online-copy { padding-inline: 20px; }
+  .rhc-services .rhc-services__steps li { padding: 14px; }
+  .rhc-services .rhc-services__step-number { right: 12px; top: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rhc-services *, .rhc-services *::before, .rhc-services *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .rhc-services .rhc-services__card:hover,
+  .rhc-services .rhc-services__card:hover .rhc-services__card-icon,
+  .rhc-services .rhc-services__card:hover .rhc-services__card-image,
+  .rhc-services .rhc-services__read-more:hover > svg,
+  .rhc-services .rhc-services__button:hover,
+  .rhc-services .rhc-services__contact-link:hover { transform: none; }
+}
+@media (forced-colors: active) {
+  .rhc-services .rhc-services__card,
+  .rhc-services .rhc-services__reasons li,
+  .rhc-services .rhc-services__steps li,
+  .rhc-services .rhc-services__read-more { border: 1px solid ButtonText; }
+}
